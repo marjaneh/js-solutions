@@ -10,7 +10,7 @@ for (var i = 0; i < l.length; i++) {
 }
 
 
-function diplayObject(object){
+function diplayObject(object){  //
     for(propertyName in object){
         object[propertyName]
     }
