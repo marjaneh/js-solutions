@@ -10,12 +10,13 @@ for (var i = 0; i < l.length; i++) {
 }
 
 
-function diplayObject(object){  //
-    for(propertyName in object){
-        object[propertyName]
+//function diplayObject(object){  
+    for(var propertyName in obj){
+        if(obj[propertyName] === 1)
+            console.log(propertyName);
     }
-}
+//}
 
 
 
-console.log(obj);
+
