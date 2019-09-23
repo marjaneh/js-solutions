@@ -8,11 +8,11 @@ for (var i = 0; i < l.length; i++) {
      else 
         obj[key] = 1
 }
-
+//console.log(obj);
 
 //function diplayObject(object){  
     for(var propertyName in obj){
-        if(obj[propertyName] === 1)
+        if(obj[propertyName] === 1)  //value of obj property 
             console.log(propertyName);
     }
 //}
