@@ -1,22 +1,27 @@
-let l = [6, 1, 2, 5, 2, 1, 3, 4, 4, 5, 6];
+// ES5 Implementation
+var array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
 
-const obj = {};
-for (var i = 0; i < l.length; i++) {
-    var key = l[i];
-    if (obj.hasOwnProperty(key)) 
-        obj[key] = obj[key] + 1
-     else 
-        obj[key] = 1
-}
-//console.log(obj);
+uniqueArray(array); // [1, 2, 3, 5, 9, 8]
 
-//function diplayObject(object){  
-    for(var propertyName in obj){
-        if(obj[propertyName] === 1)  //value of obj property 
-            console.log(propertyName);
+function uniqueArray(array) {
+  var hashmap = {};
+  var unique = [];
+
+  for(var i = 0; i < array.length; i++) {
+    // If key returns undefined (unique), it is evaluated as false.
+    if(!hashmap.hasOwnProperty(array[i])) {
+      hashmap[array[i]] = 1;
+      unique.push(array[i]);
     }
-//}
+  }
 
+  return unique;
+}
 
+-----------------------------------------------------------------------------
 
+// ES6 Implementation
+var array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
+
+Array.from(new Set(array)); // [1, 2, 3, 5, 9, 8]
 
